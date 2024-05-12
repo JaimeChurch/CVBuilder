@@ -1,23 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Info(props) {
 
-    const [info, setEditor] = useState({
+    const [info, setInfo] = useState({
         name: "",
         email: "",
         phone: ""
     });
 
     const handleNameChange = (e) => {
-        setEditor(previous => ({ ...previous, name: e.target.value }))
+        setInfo(previous => ({ ...previous, name: e.target.value }))
         props.onChange({ ...info, name: e.target.value })
     }
     const handleEmailChange = (e) => {
-        setEditor(previous => ({ ...previous, email: e.target.value }))
+        setInfo(previous => ({ ...previous, email: e.target.value }))
         props.onChange({ ...info, email: e.target.value })
     }
     const handlePhoneChange = (e) => {
-        setEditor(previous => ({ ...previous, phone: e.target.value }))
+        setInfo(previous => ({ ...previous, phone: e.target.value }))
         props.onChange({ ...info, phone: e.target.value })
     }
 
@@ -36,8 +36,6 @@ function Info(props) {
                 <label htmlFor="phone">Phone Number</label>
                 <input name="phone" type="text" value={info.phone} onChange={handlePhoneChange} />
             </div>
-
-            <h2>Education</h2>
         </div>
     )
 }

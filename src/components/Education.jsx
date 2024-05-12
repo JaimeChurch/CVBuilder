@@ -22,6 +22,7 @@ function Education(props) {
     }
     return (
         <div>
+            <h2>Education</h2>
             <div>
                 <label htmlFor="school">School</label>
                 <input name="school" type="text" value={education.school} onChange={handleSchoolChange} />

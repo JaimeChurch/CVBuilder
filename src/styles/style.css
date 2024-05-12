@@ -21,6 +21,12 @@
     padding: 10px;
     background-color:maroon;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#leftPanel > *{
+    padding-bottom: 10px;
 }
 
 #rightPanel {
