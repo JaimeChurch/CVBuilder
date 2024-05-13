@@ -5,7 +5,7 @@ import Education from './components/Education';
 import Experience from './components/Experience';
 
 function App() {
-  
+
   const [info, setInfo] = useState({
     name: "John Dough",
     email: "doughboy@gmail.com",
@@ -25,38 +25,36 @@ function App() {
     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede."
   });
 
-  const [submittedInfo, setSubmittedInfo] = useState(null);
-  const [submittedEducation, setSubmittedEducation] = useState(null);
-  const [submittedExperience, setSubmittedExperience] = useState(null);
-
   const [editingInfo, setEditingInfo] = useState({ ...info });
+  const [submittedInfo, setSubmittedInfo] = useState(null);
+
   const [editingEducation, setEditingEducation] = useState({ ...education });
+  const [submittedEducation, setSubmittedEducation] = useState(null);
+
   const [editingExperience, setEditingExperience] = useState({ ...experience });
+  const [submittedExperience, setSubmittedExperience] = useState(null);
 
   const handleInfoChange = (update) => {
     setEditingInfo(update);
+  };
+  const handleInfoSubmit = () => {
+    setSubmittedInfo(editingInfo);
   };
 
   const handleEducationChange = (update) => {
     setEditingEducation(update);
   };
-
-  const handleExperienceChange = (update) => {
-    setEditingExperience(update);
-  };
-
-  const handleInfoSubmit = () => {
-    setSubmittedInfo(editingInfo);
-  };
-
   const handleEducationSubmit = () => {
     setSubmittedEducation(editingEducation);
   };
 
+  const handleExperienceChange = (update) => {
+    setEditingExperience(update);
+  };
   const handleExperienceSubmit = () => {
     setSubmittedExperience(editingExperience);
   };
-
+  
   return (
     <div id='container'>
       <div id='title'>
