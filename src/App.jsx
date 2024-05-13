@@ -5,6 +5,7 @@ import Education from './components/Education';
 import Experience from './components/Experience';
 
 function App() {
+  
   const [info, setInfo] = useState({
     name: "John Dough",
     email: "doughboy@gmail.com",
@@ -93,7 +94,8 @@ function App() {
                 <td>{submittedEducation ? submittedEducation.school : education.school}</td>
               </tr>
               <tr>
-                <td></td><td>{submittedEducation ? submittedEducation.degree : education.degree}</td>
+                <td></td>
+                <td>{submittedEducation ? submittedEducation.degree : education.degree}</td>
               </tr>
               <tr>
                 <td><h2>Experience</h2></td>
@@ -113,7 +115,6 @@ function App() {
             </tbody>
           </table>
         </div>
-
       </div>
     </div>
   )

@@ -5,10 +5,6 @@
 
 #container {
     font-size: 125%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
 }
 
 #panels {
@@ -19,14 +15,15 @@
     height: 100vh;
     width: 30vw;
     padding: 10px;
-    background-color:maroon;
+    background-color: maroon;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
 
-#leftPanel > *{
+#leftPanel>* {
     padding-bottom: 10px;
+    padding-right: 10px;
 }
 
 #rightPanel {
@@ -35,4 +32,22 @@
     padding: 20px;
     overflow-y: auto;
     background-color: navy;
+}
+
+#rightPanel table {
+    width: 95%; 
+    table-layout: fixed; 
+}
+
+#rightPanel td {
+    word-wrap: break-word;
+}
+
+.input {
+    width: 100%;
+}
+
+.descriptionInput {
+    width: 100%;
+    height: 150px;
 }

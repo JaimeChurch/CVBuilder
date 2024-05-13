@@ -26,15 +26,15 @@ function Info(props) {
             <h2>Personal Information</h2>
             <div>
                 <label htmlFor="name">Full Name</label>
-                <input name="name" type="text" value={info.name} onChange={handleNameChange} />
+                <input name="name" type="text" onChange={handleNameChange} class="input" value={info.name} />
             </div>
             <div>
                 <label htmlFor="email">Email</label>
-                <input name="email" type="text" value={info.email} onChange={handleEmailChange} />
+                <input name="email" type="text" onChange={handleEmailChange} class="input" value={info.email} />
             </div>
             <div>
                 <label htmlFor="phone">Phone Number</label>
-                <input name="phone" type="text" value={info.phone} onChange={handlePhoneChange} />
+                <input name="phone" type="text" onChange={handlePhoneChange} class="input" value={info.phone} />
             </div>
         </div>
     )

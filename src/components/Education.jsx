@@ -25,15 +25,15 @@ function Education(props) {
             <h2>Education</h2>
             <div>
                 <label htmlFor="school">School</label>
-                <input name="school" type="text" value={education.school} onChange={handleSchoolChange} />
+                <input name="school" type="text" class="input" value={education.school} onChange={handleSchoolChange} />
             </div>
             <div>
                 <label htmlFor="dates">Dates Attended</label>
-                <input name="dates" type="text" value={education.dates} onChange={handleDatesChange} />
+                <input name="dates" type="text" class="input" value={education.dates} onChange={handleDatesChange} />
             </div>
             <div>
                 <label htmlFor="degree">Degree</label>
-                <input name="degree" type="text" value={education.degree} onChange={handleDegreeChange} />
+                <input name="degree" type="text" class="input" value={education.degree} onChange={handleDegreeChange} />
             </div>
         </div>
     )
